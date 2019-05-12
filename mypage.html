@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<title>my proj</title>
+  <link rel="stylesheet" type="text/css" href="./reset.css">
+  <link rel="stylesheet" type="text/css" href="./mypage.css">
+</head>
+<body>
+    <div id="app"> 
+
+
+    	<div class="top">
+        <div class="top_l_1">
+          <a href="#"><img src="./logo.png" width="300px"></a>
+        </div>
+        <div class="top_l_2">
+          <ul>
+            <li><a href="#" class="aa">电子书</a></li>
+            <li><a href="#" class="aa">视频</a></li>
+            <li><a href="#" class="aa">文章</a></li>
+            <li><a href="#" class="aa">说明</a></li>
+            <li><a href="#">制作者</a></li>
+          </ul>
+        </div>
+        <div class="top_r_1">
+          <input type="text" value="搜索" class="top_r_text">
+          <input type="button" value="搜索" class="top_r_btn">
+        </div>
+        <div class="top_r_2">
+          <div class="top_r_pic"><img src="./portrait.jpg"></div>
+          <div class="top_r_te">guofang</div>
+        </div>
+      </div>
+
+       <div class="content">
+         <div class="c1" id="c11"></div>
+         <div class="c2" id="c21"></div>
+         <div class="c3" id="c31" onmouseenter="f2()" onmouseleave="f3()"></div>
+         <div class="c4" id="c41"></div>
+         <div class="c5" id="c51"></div>
+         <div class="al" id="al1" onclick="f1()"></div>
+         <div class="ar" id="ar1" onclick="f4()">></div>
+
+       </div>
+
+
+<div class="blank"></div>
+
+<div class="foot">
+  <div class="f_t">
+    <p>关注我：</p>
+  </div>
+    
+  <div class="f_imf">
+    <ul>
+        <li><a href="#"><img src="lofter.png"></a><p>lofter</p></li>
+        <li><a href="#"><img src="weibo.png"></a><p>weibo</p></li>
+        <li><a href="#"><img src="tuchong.png"></a><p>tuchong</p></li>
+        <li><a href="#"><img src="github.png"></a><p>github</p></li>
+    </ul>
+
+
+  </div>
+ <div class="wechat">
+  <img src="wechat_QRcode.jpg">
+  <p>微信公众号</p>
+
+
+
+</div>
+
+
+
+</div>
+<div class="last">
+  <p>网页设计&制作 : guofang | all copyrights reserved</p>
+</div>
+
+</div>
+
+
+
+
+    </div>
+
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+<script type="text/javascript" src="mypage.js"></script>
+<script >
+	
+
+
+
+var sss=0;
+var slen=['c31','c41','c51','c11','c21'];
+function f1()
+{
+ 
+  // donghua(250,750,300,390,0.7,1,0.5,1,200,500,slen[sss%5]);
+  // donghua(200,900,250,750,0.7,1,0.5,0.5,160,240,slen[(sss+1)%5]);
+  // donghua(200,250,200,900,1,1,0.5,0.5,80,120,slen[(sss+2)%5]);
+  // donghua(250,350,200,250,1.5,1,0.5,0.5,80,120,slen[(sss+3)%5]);
+  // donghua(300,390,250,350,1.5,1,0.5,0.5,160,240,slen[(sss+4)%5]);
+donghua(250,350,300,390,0.5,1,0.5,1,320,480,slen[(sss+0)%5]);
+ donghua(200,250,250,350,0.5,1,0.5,0.5,160,240,slen[(sss+1)%5]);
+   donghua(200,900,200,250,1,1,0.5,0.5,80,120,slen[(sss+2)%5]);
+   donghua(250,750,200,900,2,1,0.5,0.5,80,120,slen[(sss+3)%5]);
+   donghua(300,390,250,750,2,1,1,0.5,160,240,slen[(sss+4)%5]);
+
+
+  sss=(sss+4)%5;
+
+
+}
+
+ var timer0 = null;
+var timer1 = null;
+var timer2 = null;
+ var timer3 = null;
+  var timer4 = null;
+  var flag=true;
+function f4()
+{
+  if (flag)
+{clearInterval(timer0);
+   
+clearInterval(timer1);
+   
+clearInterval(timer2);
+  
+clearInterval(timer3);
+  
+clearInterval(timer4);
+  // donghua(250,750,300,390,0.7,1,0.5,1,200,500,slen[sss%5]);
+  // donghua(200,900,250,750,0.7,1,0.5,0.5,160,240,slen[(sss+1)%5]);
+  // donghua(200,250,200,900,1,1,0.5,0.5,80,120,slen[(sss+2)%5]);
+  // donghua(250,350,200,250,1.5,1,0.5,0.5,80,120,slen[(sss+3)%5]);
+  // donghua(300,390,250,350,1.5,1,0.5,0.5,160,240,slen[(sss+4)%5]);
+donghua(250,750,300,390,0.5,1,0.5,1,320,480,slen[(sss+0)%5],timer0);
+ donghua(200,900,250,750,0.5,1,0.5,0.5,160,240,slen[(sss+1)%5],timer1);
+   donghua(200,250,200,900,1,1,0.5,0.5,80,120,slen[(sss+2)%5],timer2);
+  donghua(250,350,200,250,2,1,0.5,0.5,80,120,slen[(sss+3)%5],timer3);
+   donghua(300,390,250,350,2,1,1,0.5,160,240,slen[(sss+4)%5],timer4);
+
+
+  sss=(sss+4)%5;
+
+}
+}
+
+
+
+
+
+
+
+
+
+function f2()
+{
+
+
+
+
+}
+
+function f3()
+{
+
+
+
+
+}
+
+
+
+function donghua(ex,ey,sx,sy,es,ss,ea,sa,a,b,idid,timer)
+{
+  flag=false;
+var idi=document.getElementById(idid);
+sy=idi.offsetLeft;
+sx=idi.offsetTop;
+clearInterval(timer);
+timer = setInterval(function(){
+       var dx = (ex-sx)*0.1;
+       var dy = (ey-sy)*0.1;
+       var ds = (es-ss)*0.1;
+       var da = (ea-sa)*0.1; 
+       dx = dx>0?Math.ceil(dx):Math.floor(dx);
+       dy = dy>0?Math.ceil(dy):Math.floor(dy);
+    sx=sx+dx;
+    sy=sy+dy;
+    ss=ss+ds;
+    sa=sa+da;
+
+console.log(sx+"  "+sy);
+
+
+idi.style.left=sy+'px';
+idi.style.top=sx+'px';
+idi.style.opacity=sa;
+idi.style.height=ss*a+'px';
+idi.style.width=ss*b+'px';
+if ((ey===sy))
+{clearInterval(timer);
+flag=true;}
+
+
+},100);
+
+
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
