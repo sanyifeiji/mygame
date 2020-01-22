@@ -1,6 +1,12 @@
-.democlass
+div
+{
+    width: 100%;
+    height: 560px;
+}
+
+#can
 {
 	
-	margin: 0 auto;
-	display: block;
+            
+            background: black;
 }
